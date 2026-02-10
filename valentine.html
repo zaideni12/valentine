@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine 💖</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* PAGES */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.active {
+  display: flex;
+}
+
+/* PAGE 1 */
+#page1 {
+  background-color: #0b1d3a;
+  color: white;
+}
+
+#page1 h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.heart {
+  color: pink;
+  animation: pulse 1.2s infinite;
+}
+
+.start-btn {
+  background-color: pink;
+  color: #0b1d3a;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  margin-top: 20px;
+}
+
+/* PAGE 2 */
+#page2 {
+  background-color: pink;
+  color: #0b1d3a;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.yes {
+  background-color: #22c55e;
+  color: white;
+}
+
+.no {
+  background-color: #ef4444;
+  color: white;
+  position: absolute;
+}
+
+/* PAGE 3 */
+#page3 {
+  background: linear-gradient(135deg, pink, #1e3a8a);
+  color: white;
+}
+
+#page3 h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+/* PAGE 4 */
+#page4 {
+  background-color: #0b1d3a;
+  color: white;
+  overflow-y: auto;
+}
+
+.letter {
+  max-width: 850px;
+  background: rgba(255, 192, 203, 0.15);
+  padding: 35px;
+  border-radius: 25px;
+  font-size: 1.15em;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* PAGE 5 */
+#page5 {
+  background: linear-gradient(135deg, #ffb6c1, #0b1d3a);
+  color: white;
+}
+
+#page5 h1 {
+  font-size: 3.5em;
+  animation: pulse 1.3s infinite;
+}
+
+/* HEARTS */
+.heart-float {
+  position: fixed;
+  bottom: -20px;
+  color: pink;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+  <h1>HEY MY LOVE <span class="heart">💗</span></h1>
+  <button class="start-btn" onclick="goToPage(1,2)">Click here to start</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <h1>Will you be my Valentine? 💖</h1>
+  <div class="buttons">
+    <button class="yes" onclick="goToPage(2,3)">Yes 💘</button>
+    <button class="no" id="noBtn">No 💔</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <h1>YEEEEEEEEEEEEEEEEESSSSSSSSS 💖</h1>
+  <button class="start-btn" onclick="goToPage(3,4)">Click here to read the letter 💌</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+  <div class="letter">
+    <p>My Hibati, my love,</p>
+
+    <p>
+      I do not say this lightly when I tell you that you are one of the best things that ever happened to me.
+      Your presence in my life changed so much inside me.
+      You bring peace to my heart and warmth to my soul just by being you.
+    </p>
+
+    <p>
+      I love the way you think, the way you care, and the way you keep going even when things are not easy.
+      I am so proud of you, truly proud.
+      Proud of your strength, your heart, your efforts, and everything you are becoming.
+    </p>
+
+    <p>
+      You make me feel understood, supported, and motivated.
+      You make me believe in love in a calm, real, and beautiful way.
+      Every moment with you matters to me more than you know.
+    </p>
+
+    <p>
+      Hiba, baby, babe, my queen,
+      I do not see you only in my present, I see you in my future.
+      I want to grow with you, build with you, and face life with you side by side.
+    </p>
+
+    <p>
+      Thank you for existing.
+      Thank you for being mine.
+      I love you deeply and sincerely.
+    </p>
+
+    <div style="text-align:center;">
+      <button class="start-btn" onclick="goToPage(4,5)">KANGHEK BZAF HBIBTI 💖</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+  <h1>KANGHEK BZAF HBIBTI 💗💗💗</h1>
+  <p>You are my heart, my happiness, my forever.</p>
+</div>
+
+<script>
+function goToPage(from, to) {
+  document.getElementById("page" + from).classList.remove("active");
+  document.getElementById("page" + to).classList.add("active");
+}
+
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+
+/* Floating hearts */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart-float";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.innerHTML = "💗";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
